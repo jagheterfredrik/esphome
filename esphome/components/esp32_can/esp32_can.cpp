@@ -37,9 +37,6 @@ static bool get_bitrate(canbus::CanSpeed bitrate, twai_timing_config_t *t_config
       *t_config = (twai_timing_config_t) TWAI_TIMING_CONFIG_20KBITS();
       return true;
 #endif
-    case canbus::CAN_25KBPS:
-      *t_config = (twai_timing_config_t) TWAI_TIMING_CONFIG_25KBITS();
-      return true;
     case canbus::CAN_50KBPS:
       *t_config = (twai_timing_config_t) TWAI_TIMING_CONFIG_50KBITS();
       return true;
@@ -54,9 +51,6 @@ static bool get_bitrate(canbus::CanSpeed bitrate, twai_timing_config_t *t_config
       return true;
     case canbus::CAN_500KBPS:
       *t_config = (twai_timing_config_t) TWAI_TIMING_CONFIG_500KBITS();
-      return true;
-    case canbus::CAN_800KBPS:
-      *t_config = (twai_timing_config_t) TWAI_TIMING_CONFIG_800KBITS();
       return true;
     case canbus::CAN_1000KBPS:
       *t_config = (twai_timing_config_t) TWAI_TIMING_CONFIG_1MBITS();
